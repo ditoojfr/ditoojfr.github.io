@@ -1,6 +1,27 @@
 const navLinks = document.getElementById("nav-links");
 const menuBtn = document.getElementById("menu-btn");
 const menuBtnIcon = menuBtn.querySelector("i");
+const projectFilters = document.querySelectorAll('.project-filter');
+const projectItems = document.querySelectorAll('.project-item');
+
+projectFilters.forEach(filter => {
+  filter.addEventListener('click', () => {
+    // Remove active class from all filters
+    projectFilters.forEach(f => f.classList.remove('active'));
+    // Add active class to clicked filter
+    filter.classList.add('active');
+    
+    const category = filter.getAttribute('data-filter');
+    
+    projectItems.forEach(item => {
+      if (category === 'all' || item.getAttribute('data-category') === category) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");

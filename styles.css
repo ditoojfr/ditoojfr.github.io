@@ -1,16 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #5d7bdf;
-  --secondary-color: #1a289e;
-  --extra-light: #f3f4f6;
-  --white: #ffffff;
-  --gradient-1: linear-gradient(to bottom right, #0163a5,hsl(234, 24%, 76%));
-  --gradient-2: linear-gradient(
-    to bottom,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #1e1e1e;
+  --bg-hover: #252525;
+  
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --text-muted: #888888;
+  
+  --primary-color: #6366f1;
+  --secondary-color: #8b5cf6;
+  --accent-color: #22d3ee;
+  
+  --border-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  
+  --gradient-1: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+  --gradient-2: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  
   --max-width: 1200px;
 }
 
@@ -24,6 +33,10 @@
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
+}
+
+.section__description {
+  color: var(--text-secondary);
 }
 
 .section__header {
@@ -45,13 +58,18 @@
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--white);
+  color: var(--text-primary);
   background-image: var(--gradient-2);
-  outline: none;
   border: none;
   border-radius: 5rem;
   cursor: pointer;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow-color);
 }
 
 img {
@@ -61,6 +79,22 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.service__card,
+.portfolio__card,
+.portfolio__banner {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.service__card:hover,
+.portfolio__card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
 }
 
 .logo {
@@ -81,8 +115,10 @@ body {
 
 body {
   font-family: "Montserrat", sans-serif;
-  color: var(--white);
+  color: var(--text-primary);
+  background: var(--bg-primary);
   background-image: var(--gradient-1);
+  min-height: 100vh;
 }
 
 nav {
@@ -102,6 +138,22 @@ nav {
   justify-content: space-between;
   gap: 2rem;
   background-image: var(--gradient-1);
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+input, textarea {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
 }
 
 .nav__logo {
@@ -130,8 +182,8 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  background-image: var(--gradient-2);
-  transform: translateY(-100%);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   transition: 0.5s;
   z-index: -1;
 }

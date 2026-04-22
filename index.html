@@ -22,6 +22,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#service">Service</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact" class="btn">Contact</a></li>
       </ul>
@@ -130,6 +131,86 @@
         </div>
       </div>
     </section>
+
+    <section class="section__container" id="projects">
+    <h2 class="section__header">My Projects</h2>
+    <p class="section__description">
+      Explore my latest works across web development, mobile apps, and UI/UX design.
+    </p>
+    
+    <!-- Project Category Tabs -->
+    <div style="display: flex; gap: 1rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap;">
+      <button class="btn project-filter active" data-filter="all">All</button>
+      <button class="btn project-filter" data-filter="web">Web</button>
+      <button class="btn project-filter" data-filter="mobile">Mobile Apps</button>
+      <button class="btn project-filter" data-filter="uiux">UI/UX</button>
+    </div>
+    
+    <!-- Projects Grid -->
+    <div class="portfolio__grid" id="projects-grid">
+      
+      <!-- Project Card 1 - Web -->
+      <div class="portfolio__card project-item" data-category="web">
+        <img src="assets/projects/web-project-1.jpg" alt="Web Project">
+        <div style="padding: 1.5rem;">
+          <h4 style="margin-bottom: 0.5rem;">E-Commerce Platform</h4>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            Full-stack online store with payment integration & admin dashboard.
+          </p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">React</span>
+            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Node.js</span>
+            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">MongoDB</span>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="#" style="color: var(--accent-color); font-size: 0.9rem;">🔗 Live Demo</a>
+            <a href="#" style="color: var(--text-secondary); font-size: 0.9rem;">💻 Source Code</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project Card 2 - Mobile -->
+      <div class="portfolio__card project-item" data-category="mobile">
+        <img src="assets/projects/mobile-project-1.jpg" alt="Mobile App">
+        <div style="padding: 1.5rem;">
+          <h4 style="margin-bottom: 0.5rem;">Task Manager App</h4>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            Cross-platform mobile app for productivity with cloud sync.
+          </p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Flutter</span>
+            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Firebase</span>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="#" style="color: var(--accent-color); font-size: 0.9rem;">📱 App Store</a>
+            <a href="#" style="color: var(--text-secondary); font-size: 0.9rem;">💻 Source Code</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project Card 3 - UI/UX -->
+      <div class="portfolio__card project-item" data-category="uiux">
+        <img src="assets/projects/uiux-project-1.jpg" alt="UI/UX Design">
+        <div style="padding: 1.5rem;">
+          <h4 style="margin-bottom: 0.5rem;">Finance Dashboard UI</h4>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            Modern dashboard design with dark mode & data visualization.
+          </p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Figma</span>
+            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Prototyping</span>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="#" style="color: var(--accent-color); font-size: 0.9rem;">🎨 View Design</a>
+            <a href="#" style="color: var(--text-secondary); font-size: 0.9rem;">📄 Case Study</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tambahkan lebih banyak project cards sesuai kebutuhan -->
+      
+    </div>
+  </section>
 
     <section class="section__container portfolio__container" id="portfolio">
       <h2 class="section__header">My Portfolio</h2>
