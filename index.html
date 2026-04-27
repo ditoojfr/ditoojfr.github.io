@@ -11,6 +11,15 @@
     <title>Portfolio | Dito J S</title>
   </head>
   <body>
+    <div class="stars-container">
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+    <div class="star"></div><div class="star"></div><div class="star"></div>
+  </div>
     <nav>
       <div class="nav__bar">
         <a href="#"><span class="logo nav__logo">D</span> DitoJfr</a>
@@ -30,7 +39,7 @@
     </nav>
     <header class="section__container header__container" id="home">
       <div class="header__image">
-        <img src="assets/Dito2.jpeg" alt="header" />
+        <img src="assets/Dito3.jpeg" alt="header" />
       </div>
       <div class="header__content">
         <div>
@@ -39,11 +48,12 @@
         </div>
         <p class="section__description">
           <br>
-          I am a teenager captivated by the world of programming, particularly as a web 
-          developer. Every line of code is an expression of myself, and I enjoy creating 
-          multifunctional websites that captivate and provide unforgettable user experiences. 
-          I am proud to be part of a dynamic community of young enthusiasts in the programming world, 
-          always ready to grow and improve.
+          I am a teenager captivated by the world of programming,
+          particularly as a web developer. Every line of code is 
+          an expression of myself, and I enjoy creating multifunctional 
+          websites that captivate and provide unforgettable user experiences. 
+          I am proud to be part of a dynamic community of young enthusiasts
+          in the programming world, always ready to grow and improve.
         </p>
         <div class="header__btn">
           <a href="mailto:djefriandana@gmail.com">
@@ -133,84 +143,133 @@
     </section>
 
     <section class="section__container" id="projects">
-    <h2 class="section__header">My Projects</h2>
-    <p class="section__description">
-      Explore my latest works across web development, mobile apps, and UI/UX design.
-    </p>
-    
-    <!-- Project Category Tabs -->
-    <div style="display: flex; gap: 1rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap;">
-      <button class="btn project-filter active" data-filter="all">All</button>
-      <button class="btn project-filter" data-filter="web">Web</button>
-      <button class="btn project-filter" data-filter="mobile">Mobile Apps</button>
-      <button class="btn project-filter" data-filter="uiux">UI/UX</button>
-    </div>
-    
-    <!-- Projects Grid -->
-    <div class="portfolio__grid" id="projects-grid">
+      <h2 class="section__header">My Projects</h2>
+      <p class="section__description">
+        Explore my latest works across web development, mobile apps, and UI/UX design.
+      </p>
       
-      <!-- Project Card 1 - Web -->
-      <div class="portfolio__card project-item" data-category="web">
-        <img src="assets/projects/web-project-1.jpg" alt="Web Project">
-        <div style="padding: 1.5rem;">
-          <h4 style="margin-bottom: 0.5rem;">E-Commerce Platform</h4>
-          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-            Full-stack online store with payment integration & admin dashboard.
-          </p>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
-            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">React</span>
-            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Node.js</span>
-            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">MongoDB</span>
-          </div>
-          <div style="display: flex; gap: 0.75rem;">
-            <a href="#" style="color: var(--accent-color); font-size: 0.9rem;">🔗 Live Demo</a>
-            <a href="#" style="color: var(--text-secondary); font-size: 0.9rem;">💻 Source Code</a>
-          </div>
-        </div>
+      <!-- Project Category Tabs -->
+      <div style="display: flex; gap: 1rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap;">
+        <button class="btn project-filter active" data-filter="all">All</button>
+        <button class="btn project-filter" data-filter="web">Web</button>
+        <button class="btn project-filter" data-filter="mobile">Mobile Apps</button>
+        <button class="btn project-filter" data-filter="uiux">UI/UX</button>
       </div>
       
-      <!-- Project Card 2 - Mobile -->
-      <div class="portfolio__card project-item" data-category="mobile">
-        <img src="assets/projects/mobile-project-1.jpg" alt="Mobile App">
-        <div style="padding: 1.5rem;">
-          <h4 style="margin-bottom: 0.5rem;">Task Manager App</h4>
-          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-            Cross-platform mobile app for productivity with cloud sync.
-          </p>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
-            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Flutter</span>
-            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Firebase</span>
-          </div>
-          <div style="display: flex; gap: 0.75rem;">
-            <a href="#" style="color: var(--accent-color); font-size: 0.9rem;">📱 App Store</a>
-            <a href="#" style="color: var(--text-secondary); font-size: 0.9rem;">💻 Source Code</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Project Card 3 - UI/UX -->
-      <div class="portfolio__card project-item" data-category="uiux">
-        <img src="assets/project-1.jpg" alt="UI/UX Design">
-        <div style="padding: 1.5rem;">
-          <h4 style="margin-bottom: 0.5rem;">Finance Dashboard UI</h4>
-          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-            Modern dashboard design with dark mode & data visualization.
-          </p>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
-            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Figma</span>
-            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Prototyping</span>
-          </div>
-          <div style="display: flex; gap: 0.75rem;">
-            <a href="#" style="color: var(--accent-color); font-size: 0.9rem;">🎨 View Design</a>
-            <a href="#" style="color: var(--text-secondary); font-size: 0.9rem;">📄 Case Study</a>
+      <!-- Projects Grid -->
+      <div class="portfolio__grid" id="projects-grid">
+        
+        <div class="portfolio__card project-item" data-category="web">
+          <img src="assets/projects/cavi.png" alt="Web Project">
+          <div style="padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem;">Financial Bookkeeping</h4>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+              platfrorm for managing financial records, tracking expenses, and generating reports for small businesses.
+            </p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Java</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <a href="https://pameran-jti.polije.ac.id/product/108/cavi" style="color: var(--accent-color); font-size: 0.9rem;">🔗 More Information</a>
+              <a href="#" style="color: var(--text-secondary); font-size: 0.9rem;">💻 Source Code</a>
+            </div>
           </div>
         </div>
+        
+        <div class="portfolio__card project-item" data-category="web">
+          <img src="assets/projects/eDeslay.jpg" alt="Web Project">
+          <div style="padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem;">Informative Website</h4>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+              Website for sharing informative content and resources about Banjar Dowo village.
+            </p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">PHP Native</span>
+              <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">MySQL</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <a href="https://pameran-jti.polije.ac.id/product/427/e-deslay-elektronik-desa-layanan" style="color: var(--accent-color); font-size: 0.9rem;">🔗 More Information</a>
+              <a href="#" style="color: var(--text-secondary); font-size: 0.9rem;">💻 Source Code</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio__card project-item" data-category="uiux">
+          <img src="assets/project-1.jpg" alt="UI/UX Design">
+          <div style="padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem;">Finance Dashboard UI</h4>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+              Modern dashboard design with dark mode & data visualization.
+            </p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Figma</span>
+              <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-hover); border-radius: 1rem;">Prototyping</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <a href="#" style="color: var(--accent-color); font-size: 0.9rem;">🎨 View Design</a>
+              <a href="#" style="color: var(--text-secondary); font-size: 0.9rem;">📄 Case Study</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tambahkan lebih banyak project cards sesuai kebutuhan -->
+        
       </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="section__container" id="technologies">
+      <h2 class="section__header">Core Technologies</h2>
+      <p class="section__description">
+        Tools and technologies I use to bring ideas to life
+      </p>
       
-      <!-- Tambahkan lebih banyak project cards sesuai kebutuhan -->
-      
-    </div>
-  </section>
+      <div class="tech__grid">
+        <!-- Technology Item 1 -->
+        <div class="tech__card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+          <span>React</span>
+        </div>
+        
+        <!-- Technology Item 2 -->
+        <div class="tech__card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" />
+          <span>Next.js</span>
+        </div>
+        
+        <!-- Technology Item 3 -->
+        <div class="tech__card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+          <span>Python</span>
+        </div>
+        
+        <!-- Technology Item 4 -->
+        <div class="tech__card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" />
+          <span>Laravel</span>
+        </div>
+        
+        <!-- Technology Item 5 -->
+        <div class="tech__card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" />
+          <span>Firebase</span>
+        </div>
+        
+        <!-- Technology Item 6 -->
+        <div class="tech__card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+          <span>Git</span>
+        </div>
+        
+        <!-- Technology Item 7 -->
+        <div class="tech__card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+          <span>Figma</span>
+        </div>
+        
+        <!-- Tambahkan lebih banyak sesuai kebutuhan -->
+      </div>
+    </section>
 
     <section class="section__container portfolio__container" id="portfolio">
       <h2 class="section__header">My Portfolio</h2>
@@ -267,6 +326,8 @@
         <a href="https://www.instagram.com/ditoojfr?igsh=MXI5ZGM0eXBhMDA4MQ=="><i class="ri-instagram-fill"></i></a>
         <a href="https://t.me/+oZHV42FutXVjZWU9"><i class="ri-telegram-fill"></i></a>
         <a href="https://twitter.com/itsfreyyyy"><i class="ri-twitter-x-line"></i></a>
+        <a href="https://www.linkedin.com/in/dito-jefriandana-s-9b1a4b1b3/"><i class="ri-linkedin-box-fill"></i></a>
+        <a href="https://github.com/ditoojfr"><i class="ri-github-fill"></i></a>
       </div>
     </section>
     <footer class="footer">
