@@ -44,126 +44,159 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
-// header container
-ScrollReveal().reveal(".header__content h1", {
+// Hero container
+ScrollReveal().reveal(".hero__badge", {
   ...scrollRevealOption,
 });
 
-ScrollReveal().reveal(".header__content .section__description", {
+ScrollReveal().reveal(".hero__title", {
   ...scrollRevealOption,
-  delay: 500,
+  delay: 200,
 });
 
-ScrollReveal().reveal(".header__content .header__btn", {
+ScrollReveal().reveal(".hero__subtitle", {
+  ...scrollRevealOption,
+  delay: 400,
+});
+
+ScrollReveal().reveal(".hero__desc", {
+  ...scrollRevealOption,
+  delay: 600,
+});
+
+ScrollReveal().reveal(".hero__actions", {
+  ...scrollRevealOption,
+  delay: 800,
+});
+
+ScrollReveal().reveal(".hero__stats", {
   ...scrollRevealOption,
   delay: 1000,
 });
 
-// about container
+ScrollReveal().reveal(".hero__visual", {
+  ...scrollRevealOption,
+  origin: "right",
+  delay: 500,
+});
+
+// About container
+ScrollReveal().reveal(".about__visual", {
+  ...scrollRevealOption,
+  origin: "left",
+});
+
+ScrollReveal().reveal(".about__content .section__tag", {
+  ...scrollRevealOption,
+  delay: 200,
+});
+
 ScrollReveal().reveal(".about__content .section__header", {
   ...scrollRevealOption,
+  delay: 400,
 });
 
 ScrollReveal().reveal(".about__content .section__description", {
   ...scrollRevealOption,
-  delay: 500,
+  delay: 600,
 });
 
 ScrollReveal().reveal(".about__content .about__btn", {
   ...scrollRevealOption,
-  delay: 1000,
+  delay: 800,
 });
 
-// service container
-ScrollReveal().reveal(".service__card", {
+// Service container
+ScrollReveal().reveal(".service__container .section__tag", {
   ...scrollRevealOption,
-  interval: 500,
 });
 
-// portfolio container
-ScrollReveal().reveal(".portfolio__card", {
-  duration: 1000,
-  interval: 500,
-});
-
-// Technologies container
-ScrollReveal().reveal(".tech__card", {
+ScrollReveal().reveal(".service__container .section__header", {
   ...scrollRevealOption,
-  interval: 200,
   delay: 200,
 });
 
-// Dynamic Stars Generator (Opsional)
-function createStars(count = 50) {
-  const container = document.querySelector('.stars-container');
-  if (!container) return;
-  
-  for (let i = 0; i < count; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
-    
-    // Random properties
-    const top = Math.random() * 100;
-    const left = Math.random() * 100;
-    const size = Math.random() * 2 + 1; // 1-3px
-    const duration = Math.random() * 3 + 2; // 2-5s
-    const delay = Math.random() * 5;
-    const opacity = Math.random() * 0.5 + 0.3; // 0.3-0.8
-    
-    star.style.cssText = `
-      top: ${top}%;
-      left: ${left}%;
-      width: ${size}px;
-      height: ${size}px;
-      --duration: ${duration}s;
-      --delay: ${delay}s;
-      --opacity: ${opacity};
-    `;
-    
-    container.appendChild(star);
-  }
-}
-
-// Initialize stars after DOM loads
-document.addEventListener('DOMContentLoaded', () => {
-  createStars(50); // Generate 50 stars
+ScrollReveal().reveal(".service__container .section__description", {
+  ...scrollRevealOption,
+  delay: 400,
 });
 
-// Meteor Effect Generator
-function createMeteor() {
-  const meteor = document.createElement('div');
-  meteor.classList.add('meteor');
-  
-  // Posisi awal acak (lebih sering muncul di area kanan/atas agar terlihat natural)
-  const startY = Math.random() * (window.innerHeight * 0.6);
-  const startX = Math.random() * window.innerWidth;
-  
-  meteor.style.top = `${startY}px`;
-  meteor.style.left = `${startX}px`;
-  
-  // Durasi acak agar tidak monoton (2s - 5s)
-  const duration = 2 + Math.random() * 3;
-  meteor.style.animationDuration = `${duration}s`;
-  
-  document.body.appendChild(meteor);
-  
-  // Hapus elemen setelah animasi selesai agar tidak membebani DOM
-  setTimeout(() => {
-    if (meteor.parentNode) meteor.remove();
-  }, duration * 1000);
-}
+ScrollReveal().reveal(".service__card", {
+  ...scrollRevealOption,
+  interval: 200,
+  delay: 500,
+});
 
-// Jalankan meteor secara berkala
-function startMeteors() {
-  // Munculkan 2 meteor pertama saat load
-  setTimeout(createMeteor, 1500);
-  setTimeout(createMeteor, 4000);
-  
-  // Lanjutkan dengan interval acak (4s - 8s)
-  setInterval(() => {
-    createMeteor();
-  }, 4000 + Math.random() * 4000);
-}
+// Projects container
+ScrollReveal().reveal("#projects .section__tag", {
+  ...scrollRevealOption,
+});
 
-// Pastikan DOM sudah siap
-document.addEventListener('DOMContentLoaded', startMeteors);
+ScrollReveal().reveal("#projects .section__header", {
+  ...scrollRevealOption,
+  delay: 200,
+});
+
+ScrollReveal().reveal("#projects .section__description", {
+  ...scrollRevealOption,
+  delay: 400,
+});
+
+ScrollReveal().reveal(".filter-container", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".project-item", {
+  ...scrollRevealOption,
+  interval: 200,
+  delay: 600,
+});
+
+// Technologies container
+ScrollReveal().reveal("#technologies .section__tag", {
+  ...scrollRevealOption,
+});
+
+ScrollReveal().reveal("#technologies .section__header", {
+  ...scrollRevealOption,
+  delay: 200,
+});
+
+ScrollReveal().reveal("#technologies .section__description", {
+  ...scrollRevealOption,
+  delay: 400,
+});
+
+ScrollReveal().reveal(".tech__card", {
+  ...scrollRevealOption,
+  interval: 150,
+  delay: 500,
+});
+
+// Portfolio container
+ScrollReveal().reveal(".portfolio__container .section__tag", {
+  ...scrollRevealOption,
+});
+
+ScrollReveal().reveal(".portfolio__container .section__header", {
+  ...scrollRevealOption,
+  delay: 200,
+});
+
+ScrollReveal().reveal(".portfolio__container .section__description", {
+  ...scrollRevealOption,
+  delay: 400,
+});
+
+ScrollReveal().reveal(".portfolio__gallery-card", {
+  duration: 1000,
+  interval: 200,
+  delay: 500,
+});
+
+// Contact container
+ScrollReveal().reveal(".contact__card", {
+  ...scrollRevealOption,
+  duration: 1000,
+});
