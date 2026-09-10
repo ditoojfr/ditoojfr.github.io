@@ -38,6 +38,49 @@ navLinks.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", "ri-menu-3-line");
 });
 
+// Dynamic copyright year
+const yearSpan = document.getElementById("year");
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// Contact form submission via Formspree
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+if (contactForm && formStatus) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Disable button while sending
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    formStatus.textContent = "🚀 Sending your message...";
+    formStatus.className = "form__status form__status--sending";
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        formStatus.textContent = "✅ Message sent! I'll get back to you soon.";
+        formStatus.className = "form__status form__status--success";
+        contactForm.reset();
+      } else {
+        throw new Error("Formspree response not ok");
+      }
+    } catch (err) {
+      formStatus.textContent = "⚠️ Something went wrong. Please try again or email me directly.";
+      formStatus.className = "form__status form__status--error";
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}
+
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
